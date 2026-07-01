@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-card">
+
+    <div style="text-align:center;margin-bottom:25px;">
+        <h1 style="font-size:55px;">👤</h1>
+        <h2>Crear Cuenta</h2>
+        <p>Únete a Mi Despensa Virtual</p>
+    </div>
+
+    <form id="registroForm">
+
+        <div class="form-group">
+            <label>Nombre</label>
+            <input class="form-control" type="text" id="nombre" placeholder="Ej: Juan" required>
+        </div>
+
+        <div class="form-group">
+            <label>Apellido</label>
+            <input class="form-control" type="text" id="apellido" placeholder="Ej: Pérez" required>
+        </div>
+
+        <div class="form-group">
+            <label>Correo electrónico</label>
+            <input class="form-control" type="email" id="correo" placeholder="ejemplo@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label>Teléfono</label>
+            <input class="form-control" type="text" id="telefono" placeholder="0991234567" required>
+        </div>
+
+        <div class="form-group">
+            <label>Dirección</label>
+            <input class="form-control" type="text" id="direccion" placeholder="Guayaquil, Ecuador" required>
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input class="form-control" type="password" id="password" placeholder="Mínimo 8 caracteres" required>
+        </div>
+
+        <div class="form-group">
+            <label>Confirmar contraseña</label>
+            <input class="form-control" type="password" id="confirmar" placeholder="Repita su contraseña" required>
+        </div>
+
+        <label style="display:flex;align-items:center;gap:8px;color:white;margin-bottom:18px;">
+            <input type="checkbox" id="mostrarPassword">
+            Mostrar contraseñas
+        </label>
+
+        <p id="mensaje" style="text-align:center;margin-bottom:15px;"></p>
+
+        <button class="btn" style="width:100%;" type="submit">
+            Registrarme
+        </button>
+
+    </form>
+
+    <div style="text-align:center;margin-top:25px;">
+        <p>¿Ya tienes una cuenta?</p>
+        <a href="login.html">Iniciar sesión</a>
+        <br>
+        <a href="index.html">← Volver al inicio</a>
+    </div>
+
+</div>
+
+<script src="services/api.js"></script>
+<script src="js/registro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🛒 Mi Despensa Virtual</div>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+    </div>
+</nav>
+
+<section class="container">
+    <h1>Mi carrito</h1>
+    <p>Revisa tus productos antes de confirmar la compra.</p>
+</section>
+
+<section class="container">
+
+    <div id="carritoVacio" class="card" style="display:none;text-align:center;">
+        <h2>🛒 Tu carrito está vacío</h2>
+        <p>Agrega productos para continuar con tu compra.</p>
+        <br>
+        <a href="productos.html" class="btn">Ver productos</a>
+    </div>
+
+    <div id="carritoContenido">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaCarrito"></tbody>
+        </table>
+
+        <br>
+
+        <div class="card oferta">
+            <div>
+                <h2>Total a pagar</h2>
+                <p>Confirma tu pedido para continuar con el proceso de compra.</p>
+            </div>
+
+            <h1 id="totalCarrito">$0.00</h1>
+        </div>
+
+        <br>
+
+        <div style="display:flex;gap:15px;justify-content:flex-end;flex-wrap:wrap;">
+            <a href="productos.html" class="btn btn-primary">Seguir comprando</a>
+            <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar carrito</button>
+            <button class="btn" onclick="confirmarCompra()">Confirmar compra</button>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Mi Despensa Virtual</p>
+</footer>
+
+<script src="services/api.js"></script>
+<script src="js/carrito.js"></script>
+</body>
+</html>

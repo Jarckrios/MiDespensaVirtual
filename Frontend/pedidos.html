@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🛒 Mi Despensa Virtual</div>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="perfil.html">Perfil</a>
+    </div>
+</nav>
+
+<section class="container">
+    <h1>Mis pedidos</h1>
+    <p>Aquí puedes revisar el historial de tus compras.</p>
+</section>
+
+<section class="container">
+
+    <div id="sinPedidos" class="card" style="display:none;text-align:center;">
+        <h2>📦 No tienes pedidos</h2>
+        <p>Cuando confirmes una compra aparecerá aquí.</p>
+        <br>
+        <a href="productos.html" class="btn">Comprar productos</a>
+    </div>
+
+    <div id="listaPedidos"></div>
+
+</section>
+
+<footer>
+    <p>© 2026 Mi Despensa Virtual</p>
+</footer>
+<script src="services/api.js"></script>
+<script src="js/pedidos.js"></script>
+
+</body>
+</html>

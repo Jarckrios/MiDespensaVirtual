@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <aside class="sidebar">
+        <h2>🛒 Admin</h2>
+        <a href="admin.html">Dashboard</a>
+        <a href="productos.html">Ver tienda</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="index.html">Inicio</a>
+        <a href="login.html">Cerrar sesión</a>
+    </aside>
+
+    <main class="admin-main">
+
+        <h1>Panel Administrativo</h1>
+        <p>Gestiona los productos de Mi Despensa Virtual.</p>
+
+        <br>
+
+        <section class="stats">
+            <div class="card">
+                <h3>📦 Productos</h3>
+                <h1 id="totalProductos">0</h1>
+                <p>Productos registrados.</p>
+            </div>
+
+            <div class="card">
+                <h3>💰 Inventario</h3>
+                <h1 id="valorInventario">$0.00</h1>
+                <p>Valor estimado.</p>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section class="card">
+
+            <h2 id="tituloFormulario">➕ Nuevo Producto</h2>
+
+            <form id="formProducto">
+
+                <input type="hidden" id="id_producto">
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea class="form-control" id="descripcion" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Precio</label>
+                    <input class="form-control" type="number" step="0.01" id="precio" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Stock</label>
+                    <input class="form-control" type="number" id="stock" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Categoría</label>
+                    <input class="form-control" type="number" id="id_categoria" placeholder="Ej: 1, 2, 3..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Imagen URL</label>
+                    <input class="form-control" id="imagen" placeholder="https://...">
+                </div>
+
+                <div class="form-group">
+                    <label>Estado</label>
+                    <select class="form-control" id="estado">
+                        <option value="Disponible">Disponible</option>
+                        <option value="Agotado">Agotado</option>
+                    </select>
+                </div>
+
+                <button class="btn" type="submit">Guardar Producto</button>
+                <button class="btn btn-warning" type="button" onclick="limpiarFormulario()">Cancelar</button>
+
+            </form>
+
+        </section>
+
+        <br><br>
+
+        <section class="card">
+
+            <h2>📋 Lista de Productos</h2>
+
+            <div class="buscador">
+                <input type="text" id="buscarAdmin" placeholder="Buscar producto...">
+            </div>
+
+            <br>
+
+            <div id="tablaProductos"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/protegerAdmin.js"></script>
+<script src="js/admin-productos.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

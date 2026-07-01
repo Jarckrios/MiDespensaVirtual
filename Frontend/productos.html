@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Mi Despensa Virtual</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="shop-header">
+
+    <div class="logo">🛒 Mi Despensa Virtual</div>
+
+    <div class="shop-search">
+        <input type="text" id="buscarProducto" placeholder="Buscar productos, tecnología, frutas, limpieza...">
+        <button>Buscar</button>
+    </div>
+
+    <div class="shop-actions">
+        <span id="usuarioNombre">👤 Invitado</span>
+        <span>❤️ Favoritos</span>
+        <span id="contadorCarrito">🛒 0</span>
+    </div>
+
+</header>
+
+<nav class="category-bar" id="categorias"></nav>
+
+<section class="container">
+
+    <h1>Productos para tu hogar</h1>
+    <p>Encuentra alimentos, tecnología, limpieza, cocina y mucho más.</p>
+
+</section>
+
+<section class="container">
+
+    <div class="productos" id="contenedorProductos"></div>
+
+</section>
+
+<footer>
+    <p>© 2026 Mi Despensa Virtual | Tienda online</p>
+</footer>
+
+<script src="services/api.js"></script>
+<script src="js/productos.js"></script>
+
+</body>
+
+</html>
