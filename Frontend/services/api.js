@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:3000/api";
-
+const API_URL = "https://midespensavirtualbackend.onrender.com/api";
 async function registrarUsuario(datos) {
     try {
         const respuesta = await fetch(`${API_URL}/auth/registro`, {
