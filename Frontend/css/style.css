@@ -851,4 +851,36 @@ footer p{
     td{
         padding:10px;
     }
+    .category-bar {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 18px 7%;
+    display: flex !important;
+    gap: 12px;
+    overflow-x: auto;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    position: sticky;
+    top: 92px;
+    z-index: 500;
+}
+
+.category-btn {
+    border: none !important;
+    padding: 11px 20px !important;
+    border-radius: 999px !important;
+    background: #eef7f1 !important;
+    color: #111827 !important;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 6px 15px rgba(0,0,0,.10);
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
+    color: white !important;
+}
 }
