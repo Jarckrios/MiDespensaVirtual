@@ -1,76 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil</title>
+    <title>Mi Perfil | Mi Despensa Virtual</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <nav class="navbar">
+
     <div class="logo">🛒 Mi Despensa Virtual</div>
+
     <div class="menu">
         <a href="index.html">Inicio</a>
         <a href="productos.html">Productos</a>
         <a href="carrito.html">Carrito</a>
         <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Mi Perfil</a>
     </div>
+
 </nav>
 
 <section class="container">
 
-    <div class="card" style="max-width:700px;margin:auto;text-align:center;">
+    <div class="card perfil-card">
 
-        <img 
+        <img
             src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-            style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:20px;"
-            alt="Perfil">
+            alt="Foto de perfil"
+            class="perfil-imagen">
 
         <h1>Mi Perfil</h1>
-        <p>Información del usuario registrado.</p>
+
+        <p>Información de tu cuenta.</p>
 
         <br>
 
-        <div style="text-align:left;display:grid;gap:15px;">
+        <div class="perfil-datos">
 
             <div class="card">
-                <strong>Nombre:</strong>
-                <span id="nombreUsuario">Juan Pérez</span>
+                <strong>Nombre</strong>
+                <span id="nombreUsuario">Cargando...</span>
             </div>
 
             <div class="card">
-                <strong>Correo:</strong>
-                <span id="correoUsuario">usuario@gmail.com</span>
+                <strong>Correo electrónico</strong>
+                <span id="correoUsuario">Cargando...</span>
             </div>
 
             <div class="card">
-                <strong>Teléfono:</strong>
-                <span id="telefonoUsuario">0991234567</span>
+                <strong>Teléfono</strong>
+                <span id="telefonoUsuario">Cargando...</span>
             </div>
 
             <div class="card">
-                <strong>Dirección:</strong>
-                <span id="direccionUsuario">Guayaquil, Ecuador</span>
+                <strong>Dirección</strong>
+                <span id="direccionUsuario">Cargando...</span>
             </div>
 
         </div>
 
         <br>
 
-        <button class="btn" onclick="editarPerfil()">Editar perfil</button>
-        <button class="btn btn-danger" onclick="cerrarSesion()">Cerrar sesión</button>
+        <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
+
+            <button class="btn btn-primary" onclick="editarPerfil()">
+                ✏️ Editar perfil
+            </button>
+
+            <button class="btn btn-danger" onclick="cerrarSesion()">
+                🚪 Cerrar sesión
+            </button>
+
+        </div>
 
     </div>
 
 </section>
 
 <footer>
-    <p>© 2026 Mi Despensa Virtual</p>
+
+    <p>© 2026 Mi Despensa Virtual | Todos los derechos reservados.</p>
+
 </footer>
 
 <script src="js/perfil.js"></script>
 
 </body>
+
 </html>
