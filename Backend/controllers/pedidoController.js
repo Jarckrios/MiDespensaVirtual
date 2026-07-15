@@ -110,7 +110,7 @@ exports.obtenerPedidosUsuario = (req, res) => {
                 if (error) {
                     return res.status(500).json({
                         ok: false,
-                        mensaje: error.message
+                        mensaje: error.message 
                     });
                 }
 
