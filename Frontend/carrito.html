@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras | Mi Despensa Virtual</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
 <nav class="navbar">
     <div class="logo">🛒 Mi Despensa Virtual</div>
+
     <div class="menu">
         <a href="index.html">Inicio</a>
         <a href="productos.html">Productos</a>
@@ -23,14 +27,24 @@
 </section>
 
 <section class="container">
-    <div id="carritoVacio" class="card" style="display:none;text-align:center;">
+
+    <div
+        id="carritoVacio"
+        class="card"
+        style="display:none;text-align:center;"
+    >
         <h2>🛒 Tu carrito está vacío</h2>
         <p>Agrega productos para continuar con tu compra.</p>
+
         <br>
-        <a href="productos.html" class="btn">Ver productos</a>
+
+        <a href="productos.html" class="btn">
+            Ver productos
+        </a>
     </div>
 
     <div id="carritoContenido">
+
         <div style="overflow-x:auto;">
             <table>
                 <thead>
@@ -42,6 +56,7 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
+
                 <tbody id="tablaCarrito"></tbody>
             </table>
         </div>
@@ -51,20 +66,52 @@
         <div class="card oferta">
             <div>
                 <h2>Total a pagar</h2>
-                <p>Confirma tu pedido para elegir un método de pago y generar tu factura.</p>
+
+                <p>
+                    Confirma tu pedido para elegir un método de pago
+                    y generar tu factura.
+                </p>
             </div>
+
             <h1 id="totalCarrito">$0.00</h1>
         </div>
 
         <br>
 
-        <div style="display:flex;gap:15px;justify-content:flex-end;flex-wrap:wrap;">
-            <a href="productos.html" class="btn btn-primary">Seguir comprando</a>
-            <button type="button" class="btn btn-danger" onclick="vaciarCarrito()">Vaciar carrito</button>
-            <button type="button" class="btn" onclick="abrirModalPago()">Confirmar compra</button>
+        <div
+            style="
+                display:flex;
+                gap:15px;
+                justify-content:flex-end;
+                flex-wrap:wrap;
+            "
+        >
+            <a href="productos.html" class="btn btn-primary">
+                Seguir comprando
+            </a>
+
+            <button
+                type="button"
+                class="btn btn-danger"
+                onclick="vaciarCarrito()"
+            >
+                Vaciar carrito
+            </button>
+
+            <button
+                type="button"
+                class="btn"
+                onclick="abrirModalPago()"
+            >
+                Confirmar compra
+            </button>
         </div>
+
     </div>
+
 </section>
+
+<!-- MODAL DE MÉTODOS DE PAGO -->
 
 <div
     id="modalPago"
@@ -98,65 +145,209 @@
             margin:auto;
         "
     >
-        <h2>Selecciona el método de pago</h2>
-        <p>Elige cómo deseas pagar tu pedido.</p>
+        <h2 style="text-align:center;margin-bottom:10px;">
+            Selecciona el método de pago
+        </h2>
+
+        <p style="text-align:center;">
+            Elige cómo deseas pagar tu pedido.
+        </p>
+
         <br>
 
         <div class="metodo-pago">
-            <input type="radio" name="metodoPago" id="contraEntrega" value="Contra entrega" checked>
-            <label for="contraEntrega">💵 Pago contra entrega</label>
+            <input
+                type="radio"
+                name="metodoPago"
+                id="contraEntrega"
+                value="Contra entrega"
+                checked
+            >
+
+            <label for="contraEntrega">
+                💵 Pago contra entrega
+            </label>
         </div>
 
         <div class="metodo-pago">
-            <input type="radio" name="metodoPago" id="transferencia" value="Transferencia bancaria">
-            <label for="transferencia">🏦 Transferencia bancaria</label>
+            <input
+                type="radio"
+                name="metodoPago"
+                id="transferencia"
+                value="Transferencia bancaria"
+            >
+
+            <label for="transferencia">
+                🏦 Transferencia bancaria
+            </label>
         </div>
 
         <div class="metodo-pago">
-            <input type="radio" name="metodoPago" id="tarjeta" value="Tarjeta simulada">
-            <label for="tarjeta">💳 Tarjeta de crédito o débito</label>
+            <input
+                type="radio"
+                name="metodoPago"
+                id="tarjeta"
+                value="Tarjeta simulada"
+            >
+
+            <label for="tarjeta">
+                💳 Tarjeta de crédito o débito
+            </label>
         </div>
 
-        <div id="datosTransferencia" class="card" style="display:none;margin-top:18px;">
-            <h3>Datos para la transferencia</h3>
-            <p><strong>Banco:</strong> Banco Bolivariano</p>
-            <p><strong>Cuenta:</strong> 0941934562</p>
-            <p><strong>Tipo:</strong> Cuenta de ahorros</p>
-            <p><strong>Titular:</strong> Jarck Rios Figueroa</p>
-            <p><strong>Identificación:</strong> 0953172368</p>
-            <br>
-            <p>Después de realizar la transferencia, conserva el comprobante.</p>
+        <!-- DATOS DE TRANSFERENCIA -->
+
+        <div
+            id="datosTransferencia"
+            class="card"
+            style="display:none;margin-top:18px;"
+        >
+            <h3>🏦 Datos para la transferencia bancaria</h3>
+
+            <p>
+                <strong>Banco:</strong>
+                Banco Bolivariano
+            </p>
+
+            <p>
+                <strong>Tipo de cuenta:</strong>
+                Cuenta de Ahorros
+            </p>
+
+            <p>
+                <strong>Número de cuenta:</strong>
+                0941934562
+            </p>
+
+            <p>
+                <strong>Titular:</strong>
+                Jarck Washington Rios Figueroa
+            </p>
+
+            <p>
+                <strong>Identificación:</strong>
+                0953172368
+            </p>
+
+            <hr style="margin:15px 0;">
+
+            <p>
+                Después de realizar la transferencia,
+                conserva el comprobante de pago.
+            </p>
         </div>
 
-        <div id="datosTarjeta" style="display:none;margin-top:18px;">
+        <!-- DATOS DE TARJETA SIMULADA -->
+
+        <div
+            id="datosTarjeta"
+            style="display:none;margin-top:18px;"
+        >
             <div class="form-group">
-                <label for="numeroTarjeta">Número de tarjeta</label>
-                <input class="form-control" type="text" id="numeroTarjeta" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" autocomplete="cc-number">
+                <label for="numeroTarjeta">
+                    Número de tarjeta
+                </label>
+
+                <input
+                    class="form-control"
+                    type="text"
+                    id="numeroTarjeta"
+                    inputmode="numeric"
+                    maxlength="19"
+                    placeholder="0000 0000 0000 0000"
+                    autocomplete="cc-number"
+                >
             </div>
 
             <div class="form-group">
-                <label for="titularTarjeta">Nombre del titular</label>
-                <input class="form-control" type="text" id="titularTarjeta" placeholder="Nombre completo" autocomplete="cc-name">
+                <label for="titularTarjeta">
+                    Nombre del titular
+                </label>
+
+                <input
+                    class="form-control"
+                    type="text"
+                    id="titularTarjeta"
+                    placeholder="Nombre completo"
+                    autocomplete="cc-name"
+                >
             </div>
 
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <div class="form-group" style="flex:1;min-width:150px;">
-                    <label for="vencimientoTarjeta">Vencimiento</label>
-                    <input class="form-control" type="text" id="vencimientoTarjeta" inputmode="numeric" maxlength="5" placeholder="MM/AA" autocomplete="cc-exp">
+            <div
+                style="
+                    display:flex;
+                    gap:12px;
+                    flex-wrap:wrap;
+                "
+            >
+                <div
+                    class="form-group"
+                    style="flex:1;min-width:150px;"
+                >
+                    <label for="vencimientoTarjeta">
+                        Vencimiento
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="vencimientoTarjeta"
+                        inputmode="numeric"
+                        maxlength="5"
+                        placeholder="MM/AA"
+                        autocomplete="cc-exp"
+                    >
                 </div>
 
-                <div class="form-group" style="flex:1;min-width:150px;">
-                    <label for="cvvTarjeta">CVV</label>
-                    <input class="form-control" type="password" id="cvvTarjeta" inputmode="numeric" maxlength="4" placeholder="123" autocomplete="cc-csc">
+                <div
+                    class="form-group"
+                    style="flex:1;min-width:150px;"
+                >
+                    <label for="cvvTarjeta">
+                        CVV
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="password"
+                        id="cvvTarjeta"
+                        inputmode="numeric"
+                        maxlength="4"
+                        placeholder="123"
+                        autocomplete="cc-csc"
+                    >
                 </div>
             </div>
 
-            <p style="font-size:13px;margin-top:10px;">Aqui puede hacer tu pago con tarjeta de credito y debito.</p>
+            <p style="font-size:13px;margin-top:10px;">
+                Este formulario es una simulación académica.
+                No procesa pagos reales ni almacena datos bancarios.
+            </p>
         </div>
 
-        <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;">
-            <button type="button" class="btn" onclick="procesarPago()">Finalizar compra</button>
-            <button type="button" class="btn btn-danger" onclick="cerrarModalPago()">Cancelar</button>
+        <div
+            style="
+                display:flex;
+                gap:12px;
+                margin-top:24px;
+                flex-wrap:wrap;
+            "
+        >
+            <button
+                type="button"
+                class="btn"
+                onclick="procesarPago()"
+            >
+                Finalizar compra
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-danger"
+                onclick="cerrarModalPago()"
+            >
+                Cancelar
+            </button>
         </div>
     </div>
 </div>
@@ -167,5 +358,7 @@
 
 <script src="services/api.js"></script>
 <script src="js/carrito.js"></script>
+
 </body>
+
 </html>
